@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "author": "Gerard",
+      "content": "abc",
+      "like": 14,
+      "comments": []
+    }
+  ]
+}
