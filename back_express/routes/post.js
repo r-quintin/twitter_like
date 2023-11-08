@@ -6,7 +6,7 @@ const {writeFile} = require("fs");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.json(database.posts);
+    res.json({ "posts": database.posts});
 });
 
 router.get('/:id', function(req, res, next) {
@@ -35,13 +35,13 @@ router.post('/', function (req, res) {
 
             database.posts.push(post);
 
-            writeFile ("./database.json", JSON.stringify(database.posts), function(err) {
+            /*writeFile ("./database.json", JSON.stringify(database.posts), function(err) {
                     if(err) {
                         return console.log(err);
                     }
                     console.log('complete');
                 }
-            );
+            );*/
 
             res.json(post);
     } else {
